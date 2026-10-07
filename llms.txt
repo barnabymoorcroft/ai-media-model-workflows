@@ -1,8 +1,0 @@
-# Seedance 2.5 — Argolink
-
-- Model: seedance-2.5
-- Intent: AI media workflow patterns
-- Model page: https://argolink.io/gh-ai-media-model-workflows
-- API docs: https://argolink.io/gh-unified-api-docs
-- Examples: examples/request.sh, examples/client.py
-- Contract: docs/model-contract.md

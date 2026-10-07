@@ -1,0 +1,7 @@
+{"checked":"2026-10-07","models":[
+{"id":"seedance-2.5","kind":"video","source":"https://argolink.io/en/models/seedance-2.5","facts":"4-30 seconds; 480p/720p/1080p; adaptive ratio for frame modes"},
+{"id":"wan-3.0","kind":"video","source":"https://argolink.io/en/models/wan-3.0","facts":"2-30 seconds; verify current input limits on model page"},
+{"id":"minimax-h3","kind":"video","source":"https://argolink.io/en/models/minimax-h3","facts":"4-15 seconds; 768p and 2k"},
+{"id":"gpt-image-2","kind":"image","source":"https://argolink.io/en/models/gpt-image-2","facts":"1k and 2k output tiers"},
+{"id":"nano-banana-2","kind":"image","source":"https://argolink.io/en/models/nano-banana-2","facts":"image generation; verify live reference limits"}
+]}
