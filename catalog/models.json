@@ -1,7 +1,1111 @@
-{"checked":"2026-10-07","models":[
-{"id":"seedance-2.5","kind":"video","source":"https://argolink.io/en/models/seedance-2.5","facts":"4-30 seconds; 480p/720p/1080p; adaptive ratio for frame modes"},
-{"id":"wan-3.0","kind":"video","source":"https://argolink.io/en/models/wan-3.0","facts":"2-30 seconds; verify current input limits on model page"},
-{"id":"minimax-h3","kind":"video","source":"https://argolink.io/en/models/minimax-h3","facts":"4-15 seconds; 768p and 2k"},
-{"id":"gpt-image-2","kind":"image","source":"https://argolink.io/en/models/gpt-image-2","facts":"1k and 2k output tiers"},
-{"id":"nano-banana-2","kind":"image","source":"https://argolink.io/en/models/nano-banana-2","facts":"image generation; verify live reference limits"}
-]}
+{
+  "checked": "2026-10-07",
+  "source_catalog": "https://argolink.io/api/catalog/v1/catalog",
+  "models": [
+    {
+      "id": "seedance-2.5",
+      "display_name": "Seedance 2.5",
+      "provider": "bytedance",
+      "kind": "video",
+      "source": "https://argolink.io/en/models/seedance-2.5",
+      "checked": "2026-10-07",
+      "effective_usd_per_unit": [
+        {
+          "label": "480p",
+          "price": 0.0874
+        },
+        {
+          "label": "720p",
+          "price": 0.196
+        },
+        {
+          "label": "1080p",
+          "price": 0.483
+        }
+      ],
+      "official_usd_per_unit": [
+        {
+          "label": "480p",
+          "price": 0.1028
+        },
+        {
+          "label": "720p",
+          "price": 0.2311
+        },
+        {
+          "label": "1080p",
+          "price": 0.5686
+        }
+      ],
+      "endpoint": "/v1/videos/generations",
+      "limits": {
+        "default_resolution": "720p",
+        "default_duration": 5,
+        "modes": [
+          {
+            "mode": "text",
+            "min_duration": 4,
+            "max_duration": 30,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "default_aspect_ratio": "16:9",
+            "prompt_required": true
+          },
+          {
+            "mode": "start_image",
+            "min_duration": 4,
+            "max_duration": 30,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "adaptive"
+            ],
+            "default_aspect_ratio": "adaptive",
+            "max_images": 1,
+            "max_assets": 1,
+            "prompt_required": true
+          },
+          {
+            "mode": "first_last_frames",
+            "min_duration": 4,
+            "max_duration": 30,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "adaptive"
+            ],
+            "default_aspect_ratio": "adaptive",
+            "max_images": 2,
+            "max_assets": 2,
+            "prompt_required": true
+          },
+          {
+            "mode": "multimodal_reference",
+            "min_duration": 4,
+            "max_duration": 30,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "default_aspect_ratio": "16:9",
+            "max_images": 30,
+            "max_videos": 10,
+            "max_audios": 10,
+            "max_assets": 50,
+            "audio_only": true,
+            "reference_video": {
+              "min_seconds": 2,
+              "max_seconds": 30,
+              "total_seconds": 30
+            },
+            "reference_audio": {
+              "min_seconds": 2,
+              "max_seconds": 30,
+              "total_seconds": 30
+            },
+            "prompt_required": true
+          },
+          {
+            "mode": "video_edit",
+            "max_videos": 1,
+            "max_assets": 1,
+            "reference_video": {
+              "min_seconds": 4,
+              "max_seconds": 30,
+              "total_seconds": 30
+            },
+            "prompt_required": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "seedance-2.0",
+      "display_name": "Seedance 2.0",
+      "provider": "bytedance",
+      "kind": "video",
+      "source": "https://argolink.io/en/models/seedance-2.0",
+      "checked": "2026-10-07",
+      "effective_usd_per_unit": [
+        {
+          "label": "480p",
+          "price": 0.053
+        },
+        {
+          "label": "720p",
+          "price": 0.11
+        },
+        {
+          "label": "1080p",
+          "price": 0.28
+        },
+        {
+          "label": "4k",
+          "price": 0.58
+        }
+      ],
+      "official_usd_per_unit": [
+        {
+          "label": "480p",
+          "price": 0.0703
+        },
+        {
+          "label": "720p",
+          "price": 0.1512
+        },
+        {
+          "label": "1080p",
+          "price": 0.3742
+        },
+        {
+          "label": "4k",
+          "price": 0.7691
+        }
+      ],
+      "endpoint": "/v1/videos/generations",
+      "limits": {
+        "default_resolution": "720p",
+        "default_duration": 5,
+        "modes": [
+          {
+            "mode": "text",
+            "min_duration": 4,
+            "max_duration": 15,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "default_aspect_ratio": "16:9",
+            "prompt_required": true
+          },
+          {
+            "mode": "start_image",
+            "min_duration": 4,
+            "max_duration": 15,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "adaptive",
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "default_aspect_ratio": "adaptive",
+            "max_images": 1,
+            "max_assets": 1,
+            "prompt_required": true
+          },
+          {
+            "mode": "first_last_frames",
+            "min_duration": 4,
+            "max_duration": 15,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "adaptive",
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "default_aspect_ratio": "adaptive",
+            "max_images": 2,
+            "max_assets": 2,
+            "prompt_required": true
+          },
+          {
+            "mode": "multimodal_reference",
+            "min_duration": 4,
+            "max_duration": 15,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "default_aspect_ratio": "16:9",
+            "max_images": 9,
+            "max_videos": 3,
+            "max_audios": 3,
+            "max_assets": 15,
+            "reference_video": {
+              "min_seconds": 2,
+              "max_seconds": 15,
+              "total_seconds": 15
+            },
+            "reference_audio": {
+              "min_seconds": 2,
+              "max_seconds": 15,
+              "total_seconds": 15
+            },
+            "prompt_required": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "seedance-2.0-fast",
+      "display_name": "Seedance 2.0 Fast",
+      "provider": "bytedance",
+      "kind": "video",
+      "source": "https://argolink.io/en/models/seedance-2.0-fast",
+      "checked": "2026-10-07",
+      "effective_usd_per_unit": [
+        {
+          "label": "480p",
+          "price": 0.042
+        },
+        {
+          "label": "720p",
+          "price": 0.091
+        }
+      ],
+      "official_usd_per_unit": [
+        {
+          "label": "480p",
+          "price": 0.0562
+        },
+        {
+          "label": "720p",
+          "price": 0.121
+        }
+      ],
+      "endpoint": "/v1/videos/generations",
+      "limits": {
+        "default_resolution": "720p",
+        "default_duration": 5,
+        "modes": [
+          {
+            "mode": "text",
+            "min_duration": 4,
+            "max_duration": 15,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "default_aspect_ratio": "16:9",
+            "prompt_required": true
+          },
+          {
+            "mode": "start_image",
+            "min_duration": 4,
+            "max_duration": 15,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "adaptive",
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "default_aspect_ratio": "adaptive",
+            "max_images": 1,
+            "max_assets": 1,
+            "prompt_required": true
+          },
+          {
+            "mode": "first_last_frames",
+            "min_duration": 4,
+            "max_duration": 15,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "adaptive",
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "default_aspect_ratio": "adaptive",
+            "max_images": 2,
+            "max_assets": 2,
+            "prompt_required": true
+          },
+          {
+            "mode": "multimodal_reference",
+            "min_duration": 4,
+            "max_duration": 15,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "default_aspect_ratio": "16:9",
+            "max_images": 9,
+            "max_videos": 3,
+            "max_audios": 3,
+            "max_assets": 15,
+            "reference_video": {
+              "min_seconds": 2,
+              "max_seconds": 15,
+              "total_seconds": 15
+            },
+            "reference_audio": {
+              "min_seconds": 2,
+              "max_seconds": 15,
+              "total_seconds": 15
+            },
+            "prompt_required": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "seedance-2.0-mini",
+      "display_name": "Seedance 2.0 Mini",
+      "provider": "bytedance",
+      "kind": "video",
+      "source": "https://argolink.io/en/models/seedance-2.0-mini",
+      "checked": "2026-10-07",
+      "effective_usd_per_unit": [
+        {
+          "label": "480p",
+          "price": 0.026
+        },
+        {
+          "label": "720p",
+          "price": 0.057
+        }
+      ],
+      "official_usd_per_unit": [
+        {
+          "label": "480p",
+          "price": 0.0352
+        },
+        {
+          "label": "720p",
+          "price": 0.0756
+        }
+      ],
+      "endpoint": "/v1/videos/generations",
+      "limits": {
+        "default_resolution": "720p",
+        "default_duration": 5,
+        "modes": [
+          {
+            "mode": "text",
+            "min_duration": 4,
+            "max_duration": 15,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "default_aspect_ratio": "16:9",
+            "prompt_required": true
+          },
+          {
+            "mode": "start_image",
+            "min_duration": 4,
+            "max_duration": 15,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "adaptive",
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "default_aspect_ratio": "adaptive",
+            "max_images": 1,
+            "max_assets": 1,
+            "prompt_required": true
+          },
+          {
+            "mode": "first_last_frames",
+            "min_duration": 4,
+            "max_duration": 15,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "adaptive",
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "default_aspect_ratio": "adaptive",
+            "max_images": 2,
+            "max_assets": 2,
+            "prompt_required": true
+          },
+          {
+            "mode": "multimodal_reference",
+            "min_duration": 4,
+            "max_duration": 15,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "default_aspect_ratio": "16:9",
+            "max_images": 9,
+            "max_videos": 3,
+            "max_audios": 3,
+            "max_assets": 15,
+            "reference_video": {
+              "min_seconds": 2,
+              "max_seconds": 15,
+              "total_seconds": 15
+            },
+            "reference_audio": {
+              "min_seconds": 2,
+              "max_seconds": 15,
+              "total_seconds": 15
+            },
+            "prompt_required": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "wan-3",
+      "display_name": "Wan 3.0",
+      "provider": "alibaba",
+      "kind": "video",
+      "source": "https://argolink.io/en/models/wan-3",
+      "checked": "2026-10-07",
+      "effective_usd_per_unit": [
+        {
+          "label": "480p",
+          "price": 0.038
+        },
+        {
+          "label": "720p",
+          "price": 0.075
+        },
+        {
+          "label": "1080p",
+          "price": 0.15
+        }
+      ],
+      "official_usd_per_unit": [
+        {
+          "label": "480p",
+          "price": 0.05
+        },
+        {
+          "label": "720p",
+          "price": 0.1
+        },
+        {
+          "label": "1080p",
+          "price": 0.2
+        }
+      ],
+      "endpoint": "/v1/videos/generations",
+      "limits": {
+        "default_resolution": "720p",
+        "default_duration": 5,
+        "modes": [
+          {
+            "mode": "text",
+            "min_duration": 2,
+            "max_duration": 30,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "adaptive"
+            ],
+            "default_aspect_ratio": "16:9",
+            "prompt_required": true
+          },
+          {
+            "mode": "start_image",
+            "min_duration": 2,
+            "max_duration": 30,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "adaptive"
+            ],
+            "default_aspect_ratio": "adaptive",
+            "max_images": 1,
+            "max_assets": 1,
+            "prompt_required": true
+          },
+          {
+            "mode": "first_last_frames",
+            "min_duration": 2,
+            "max_duration": 30,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "adaptive"
+            ],
+            "default_aspect_ratio": "adaptive",
+            "max_images": 2,
+            "max_assets": 2,
+            "prompt_required": true
+          },
+          {
+            "mode": "multimodal_reference",
+            "min_duration": 2,
+            "max_duration": 30,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "adaptive"
+            ],
+            "default_aspect_ratio": "16:9",
+            "max_images": 10,
+            "max_videos": 5,
+            "max_audios": 5,
+            "max_assets": 20,
+            "audio_only": true,
+            "reference_video": {
+              "min_seconds": 1,
+              "max_seconds": 15,
+              "total_seconds": 15
+            },
+            "reference_audio": {
+              "min_seconds": 1,
+              "max_seconds": 15,
+              "total_seconds": 15
+            },
+            "max_video_plus_output_seconds": 30,
+            "prompt_required": true
+          },
+          {
+            "mode": "video_edit",
+            "max_images": 10,
+            "max_videos": 5,
+            "max_audios": 5,
+            "max_assets": 20,
+            "reference_video": {
+              "min_seconds": 1,
+              "max_seconds": 15,
+              "total_seconds": 15
+            },
+            "reference_audio": {
+              "min_seconds": 1,
+              "max_seconds": 15,
+              "total_seconds": 15
+            },
+            "prompt_required": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "wan-3-prime",
+      "display_name": "Wan 3.0 Prime",
+      "provider": "alibaba",
+      "kind": "video",
+      "source": "https://argolink.io/en/models/wan-3-prime",
+      "checked": "2026-10-07",
+      "effective_usd_per_unit": [
+        {
+          "label": "480p",
+          "price": 0.051
+        },
+        {
+          "label": "720p",
+          "price": 0.11
+        },
+        {
+          "label": "1080p",
+          "price": 0.21
+        }
+      ],
+      "official_usd_per_unit": [
+        {
+          "label": "480p",
+          "price": 0.068
+        },
+        {
+          "label": "720p",
+          "price": 0.14
+        },
+        {
+          "label": "1080p",
+          "price": 0.28
+        }
+      ],
+      "endpoint": "/v1/videos/generations",
+      "limits": {
+        "default_resolution": "720p",
+        "default_duration": 5,
+        "modes": [
+          {
+            "mode": "text",
+            "min_duration": 4,
+            "max_duration": 30,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "16:9",
+              "1:1",
+              "9:16"
+            ],
+            "default_aspect_ratio": "16:9",
+            "prompt_required": true
+          },
+          {
+            "mode": "multimodal_reference",
+            "min_duration": 4,
+            "max_duration": 30,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "16:9",
+              "1:1",
+              "9:16"
+            ],
+            "default_aspect_ratio": "16:9",
+            "max_images": 10,
+            "max_videos": 5,
+            "max_audios": 5,
+            "max_assets": 20,
+            "reference_video": {
+              "min_seconds": 1,
+              "max_seconds": 15,
+              "total_seconds": 15
+            },
+            "reference_audio": {
+              "min_seconds": 1,
+              "max_seconds": 15,
+              "total_seconds": 15
+            },
+            "max_video_plus_output_seconds": 30,
+            "prompt_required": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "minimax-h3",
+      "display_name": "MiniMax H3",
+      "provider": "minimax",
+      "kind": "video",
+      "source": "https://argolink.io/en/models/minimax-h3",
+      "checked": "2026-10-07",
+      "effective_usd_per_unit": [
+        {
+          "label": "768p",
+          "price": 0.039
+        },
+        {
+          "label": "2k",
+          "price": 0.064
+        }
+      ],
+      "official_usd_per_unit": [
+        {
+          "label": "768p",
+          "price": 0.08
+        },
+        {
+          "label": "2k",
+          "price": 0.13
+        }
+      ],
+      "endpoint": "/v1/videos/generations",
+      "limits": {
+        "default_resolution": "768p",
+        "default_duration": 5,
+        "modes": [
+          {
+            "mode": "text",
+            "min_duration": 4,
+            "max_duration": 15,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "default_aspect_ratio": "16:9",
+            "prompt_required": true
+          },
+          {
+            "mode": "start_image",
+            "min_duration": 4,
+            "max_duration": 15,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "adaptive"
+            ],
+            "default_aspect_ratio": "adaptive",
+            "max_images": 1,
+            "max_assets": 1,
+            "prompt_required": true
+          },
+          {
+            "mode": "first_last_frames",
+            "min_duration": 4,
+            "max_duration": 15,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "adaptive"
+            ],
+            "default_aspect_ratio": "adaptive",
+            "max_images": 2,
+            "max_assets": 2,
+            "prompt_required": true
+          },
+          {
+            "mode": "multimodal_reference",
+            "min_duration": 4,
+            "max_duration": 15,
+            "duration_step": 1,
+            "aspect_ratios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "adaptive"
+            ],
+            "default_aspect_ratio": "16:9",
+            "max_images": 9,
+            "max_videos": 3,
+            "max_audios": 3,
+            "max_assets": 12,
+            "reference_video": {
+              "min_seconds": 2,
+              "max_seconds": 15,
+              "total_seconds": 15
+            },
+            "reference_audio": {
+              "min_seconds": 2,
+              "max_seconds": 15,
+              "total_seconds": 15
+            },
+            "prompt_required": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "grok-imagine-video-1.5",
+      "display_name": "Grok Imagine Video 1.5",
+      "provider": "xai",
+      "kind": "video",
+      "source": "https://argolink.io/en/models/grok-imagine-video-1.5",
+      "checked": "2026-10-07",
+      "effective_usd_per_unit": [
+        {
+          "label": "480p",
+          "price": 0.064
+        },
+        {
+          "label": "720p",
+          "price": 0.112
+        },
+        {
+          "label": "1080p",
+          "price": 0.2
+        }
+      ],
+      "official_usd_per_unit": [
+        {
+          "label": "480p",
+          "price": 0.08
+        },
+        {
+          "label": "720p",
+          "price": 0.14
+        },
+        {
+          "label": "1080p",
+          "price": 0.25
+        }
+      ],
+      "endpoint": "/v1/videos/generations",
+      "limits": {
+        "default_resolution": null,
+        "default_duration": null,
+        "modes": null
+      }
+    },
+    {
+      "id": "gpt-image-2",
+      "display_name": "GPT Image 2",
+      "provider": "openai",
+      "kind": "image",
+      "source": "https://argolink.io/en/models/gpt-image-2",
+      "checked": "2026-10-07",
+      "effective_usd_per_unit": [
+        {
+          "label": "1K",
+          "price": 0.015
+        },
+        {
+          "label": "2K",
+          "price": 0.015
+        },
+        {
+          "label": "4K",
+          "price": 0.02
+        }
+      ],
+      "official_usd_per_unit": [
+        {
+          "label": "1K",
+          "price": 0.015
+        },
+        {
+          "label": "2K",
+          "price": 0.015
+        },
+        {
+          "label": "4K",
+          "price": 0.02
+        }
+      ],
+      "endpoint": "/v1/images/generations",
+      "limits": {
+        "note": "1K and 2K tiers are $0.015 per image; 4K is $0.02. Billing uses the returned image's longest edge: up to 1024 is 1K, 1025–2048 is 2K, and above 2048 is 4K. 1024x1024, 2560x1440, and 3840x2160 are verified request examples; 2560x1440 is billed as 4K by this rule.",
+        "image": {
+          "frame": "size",
+          "resolutions": [
+            "1k",
+            "2k",
+            "4k"
+          ],
+          "sizes": [
+            {
+              "aspect_ratio": "1:1",
+              "pixels": {
+                "1k": "1024x1024",
+                "2k": "1440x1440",
+                "4k": "2160x2160"
+              }
+            },
+            {
+              "aspect_ratio": "3:4",
+              "pixels": {
+                "1k": "768x1024",
+                "2k": "1440x1920",
+                "4k": "2160x2880"
+              }
+            },
+            {
+              "aspect_ratio": "4:3",
+              "pixels": {
+                "1k": "1024x768",
+                "2k": "1920x1440",
+                "4k": "2880x2160"
+              }
+            },
+            {
+              "aspect_ratio": "2:3",
+              "pixels": {
+                "1k": "682x1024",
+                "2k": "1152x1728",
+                "4k": "2160x3240"
+              }
+            },
+            {
+              "aspect_ratio": "3:2",
+              "pixels": {
+                "1k": "1024x682",
+                "2k": "1728x1152",
+                "4k": "3240x2160"
+              }
+            },
+            {
+              "aspect_ratio": "9:16",
+              "pixels": {
+                "1k": "576x1024",
+                "2k": "1152x2048",
+                "4k": "2160x3840"
+              }
+            },
+            {
+              "aspect_ratio": "16:9",
+              "pixels": {
+                "1k": "1024x576",
+                "2k": "2048x1152",
+                "4k": "3840x2160"
+              }
+            },
+            {
+              "aspect_ratio": "21:9",
+              "pixels": {
+                "1k": "1024x439",
+                "2k": "2048x878",
+                "4k": "3840x1646"
+              }
+            },
+            {
+              "aspect_ratio": "5:2",
+              "pixels": {
+                "1k": "1024x410",
+                "2k": "2048x819",
+                "4k": "3840x1536"
+              }
+            }
+          ],
+          "quality": [
+            "auto",
+            "low",
+            "medium",
+            "high"
+          ],
+          "default_quality": "auto",
+          "max_outputs": 7,
+          "max_references": 16,
+          "response_formats": [
+            "url",
+            "b64_json"
+          ]
+        }
+      }
+    },
+    {
+      "id": "nano-banana-2",
+      "display_name": "Nano Banana 2",
+      "provider": "google",
+      "kind": "image",
+      "source": "https://argolink.io/en/models/nano-banana-2",
+      "checked": "2026-10-07",
+      "effective_usd_per_unit": [
+        {
+          "label": "1K",
+          "price": 0.02
+        },
+        {
+          "label": "2K",
+          "price": 0.02
+        },
+        {
+          "label": "4K",
+          "price": 0.025
+        }
+      ],
+      "official_usd_per_unit": [
+        {
+          "label": "1K",
+          "price": 0.02
+        },
+        {
+          "label": "2K",
+          "price": 0.02
+        },
+        {
+          "label": "4K",
+          "price": 0.025
+        }
+      ],
+      "endpoint": "/v1/images/generations",
+      "limits": {
+        "note": "1K and 2K cost $0.02 per returned image; 4K costs $0.025. Fourteen aspect ratios: the ten of Nano Banana Pro plus 1:4, 4:1, 1:8 and 8:1; up to 14 reference images; 1–4 images per request, each billed; JPEG output.",
+        "image": {
+          "frame": "aspect_ratio",
+          "resolutions": [
+            "1k",
+            "2k",
+            "4k"
+          ],
+          "default_resolution": "1k",
+          "aspect_ratios": [
+            "1:1",
+            "16:9",
+            "9:16",
+            "4:3",
+            "3:4",
+            "3:2",
+            "2:3",
+            "5:4",
+            "4:5",
+            "21:9",
+            "1:4",
+            "4:1",
+            "1:8",
+            "8:1"
+          ],
+          "default_aspect_ratio": "1:1",
+          "edit_frame": "default",
+          "max_outputs": 4,
+          "max_references": 14,
+          "max_reference_mb": 14,
+          "response_formats": [
+            "b64_json"
+          ]
+        }
+      }
+    }
+  ],
+  "omitted_models": [
+    {
+      "family": "Kling",
+      "reason": "not present in this live catalog snapshot; no rate or limits asserted"
+    },
+    {
+      "family": "Veo",
+      "reason": "not present in this live catalog snapshot; no rate or limits asserted"
+    },
+    {
+      "family": "Sora",
+      "reason": "not present in this live catalog snapshot; no rate or limits asserted"
+    }
+  ]
+}
